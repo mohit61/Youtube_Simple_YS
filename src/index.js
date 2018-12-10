@@ -11,11 +11,12 @@ import VideoDetail from './components/video_detail';
 const API_KEY = 'PUT API KEY HERE';
 
 // creating new component that produce some HTML
+// App is the parent of all components like search_bar etc.
 class App extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { 
+        this.state = {
             videos: [],
             selectedVideo: null
         };
@@ -39,7 +40,7 @@ class App extends Component {
         //for searching in after specific time interval. so the inner function(with argument term) is called once in every 300mili sec.
         const videoSearch = _.debounce((term) => { this.videoSearch(term)}, 300);
 
-        return ( 
+        return (
             <div>
                 <SearchBar onSearchTermChange={videoSearch}/>
                 { /* we want to pass data of state, i.e. list of videos to child. Note
@@ -47,9 +48,9 @@ class App extends Component {
                  and to pass videos we use jsx property named videos.
                  and this is known as passing props.
                 */}
-               
+
                 <VideoDetail  video={this.state.selectedVideo}/>
-                <VideoList 
+                <VideoList
                     onVideoSelect={selectedVideo => this.setState({selectedVideo})}
                     videos={this.state.videos} />
             </div>
@@ -58,6 +59,6 @@ class App extends Component {
 }
 
 
-// taking this component's generated HTML and placing it 
+// taking this component's generated HTML and placing it
 // in the page(i.e. in the DOM)
 ReactDom.render(<App />, document.querySelector('.container'));
