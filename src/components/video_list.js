@@ -6,13 +6,15 @@ const VideoList = (props) => {
     // map is like for loop
     const videoItems = props.videos.map((video) => {
         return (
-        <VideoListItem 
+        <VideoListItem
             onVideoSelect={props.onVideoSelect}
             key={video.etag}
-            video={video} 
+            video={video}
         />
         ) ;
     });
+    //here col-md-4 is the bootstrap class to do styling and 4 is the width and
+    //can be changed.
     return (
         <ul className="col-md-4 list-group">
             {videoItems}
