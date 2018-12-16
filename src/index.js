@@ -1,4 +1,5 @@
-//we usually use underscore for importing loadash i.e. it is same as import lodash from 'lodash'
+ //we usually use underscore for importing loadash i.e. it is same as import lodash from 'lodash'
+ // lodash is used for setting specific time interval to search on input change in our app.
 import _ from 'lodash';
 import React, {Component} from 'react';
 import ReactDom from 'react-dom';
@@ -8,7 +9,7 @@ import VideoList from "./components/video_list";
 import VideoDetail from './components/video_detail';
 
 // YOUTUBE api key.
-const API_KEY = 'PUT API KEY HERE';
+const API_KEY = 'Put api key here';
 
 // creating new component that produce some HTML
 // App is the parent of all components like search_bar etc.

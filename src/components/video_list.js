@@ -6,6 +6,10 @@ const VideoList = (props) => {
     // map is like for loop
     // react requires a key to identify each element, so we use key and etag is
     // the unique key for each youtube video.
+    // each video item is returned for the map or loop used below.
+    // also we passed video property to video_list_item and contains whole
+    // video information that is used in video_list_item to display relevent
+    // content of the video.
     const videoItems = props.videos.map((video) => {
         return (
         <VideoListItem
