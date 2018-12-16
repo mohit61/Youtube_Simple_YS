@@ -4,6 +4,8 @@ import VideoListItem from './video_list_item';
 const VideoList = (props) => {
     // props.videos is the array of videos.
     // map is like for loop
+    // react requires a key to identify each element, so we use key and etag is
+    // the unique key for each youtube video.
     const videoItems = props.videos.map((video) => {
         return (
         <VideoListItem
