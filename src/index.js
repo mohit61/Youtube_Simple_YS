@@ -49,8 +49,11 @@ class App extends Component {
                  and to pass videos we use jsx property named videos.
                  and this is known as passing props.
                 */}
-
+         
                 <VideoDetail  video={this.state.selectedVideo}/>
+
+              {/* onVideoSelect function ko as  property(prop)   index.js se  video_list me pass krte hai and vidoe_list 
+              se wo function(jo ab as props.onVideoSelect hai) use video_list itme me pass krte hai. */}
                 <VideoList
                     onVideoSelect={selectedVideo => this.setState({selectedVideo})}
                     videos={this.state.videos} />
